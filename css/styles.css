@@ -1,0 +1,136 @@
+/*Generic text styling*/
+p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    line-height: inherit;
+    color: #222;
+    margin-bottom: 24px
+}
+h1 {
+    margin-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold
+}
+
+h2 {
+    font-family: 'Lora', serif;
+    display: inline
+}
+h3 {
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    margin-top: 10px;
+    padding-bottom:10px;
+    border-bottom:5px solid gainsboro;
+}
+h4 {
+    font-size:20px;
+    color:#939393;
+    text-align:center;
+    margin:60px 0 18px;
+    font-family: 'Lora', serif;
+}
+.categories {
+    text-align: center;
+}
+.categories li {
+    display: inline;
+    font-size: 13px;
+}
+.categories li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*Specialized text styling*/
+.levels {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    margin: 3% auto;
+    display: block;
+    line-height: 35px;
+    font-weight: bold;
+    color: #696969;
+}
+.intro {
+    margin: 24px 0
+}
+.intro p {
+    text-align: center;
+    font-style: italic
+}
+.prologue {
+    margin-top:24px;
+}
+.prologue p {
+    text-align: center
+}
+#invitation {
+    font-family: 'Lora', serif;
+    font-size:36px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+.byline {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+.return {
+    font-size: 16px;
+}
+.state p {
+    font-family:'Antenna';
+    font-size:14px;
+}
+.relcov {
+    margin-top: 24px;
+}
+.relcov p {
+    font-size:14px;
+}
+.relcov a {
+    text-decoration:none;
+}
+/*Select styling*/
+select {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin:0 0 24px 0;
+}
+/*Hyperlink styling*/
+a {
+    color: #222;
+    text-decoration: underline;
+    border-bottom: 0
+}
+a:visited {
+    color: #222
+}
+a:hover {
+    border-bottom: 0;
+    cursor: pointer;
+    color: #222
+}
+p a {
+    text-decoration: underline
+}
+/*Ballot races styling*/
+.races {
+    margin-bottom:24px;
+}
+.races p {
+    border-bottom:1px solid #d3d3d3;
+    padding-bottom: 5px;
+    width:100%;
+    font-size:16px;
+}
+.incumbent {
+    color:#696969;
+    margin-left:12px;
+    font-size:14px;
+    font-style:italic;
+}

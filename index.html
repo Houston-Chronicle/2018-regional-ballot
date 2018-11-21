@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Font Aerdomr icons-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!--load font awesome-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!--AngularJS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<!--Custom styles-->
+	<link rel='stylesheet' href="css/styles.css">
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body is="responsive-body">
+	<div ng-app="myApp">
+		<!--Intro text-->
+		<div ng-controller="MyCtrl">
+			<div id="main">
+				<img class="img-fluid" src="https://s.hdnux.com/photos/75/46/77/16150511/4/rawImage.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<div class="prologue col-md-10 offset-md-1">
+								<p id="invitation"><strong>Voter Guide: See who's on the midterm election ballot in Texas</strong></p>
+								<p class="byline">By <a href="https://www.houstonchronicle.com/author/jordan-rubio/">Jordan Rubio</a>, <a href="https://www.houstonchronicle.com/author/rachael-gleason/">Rachael Gleason</a>, <a href="http://www.massarahmikati.com/">Massarah Mikati</a> and <a href="https://www.houstonchronicle.com/author/jasper-scherer/">Jasper Scherer</a></p>
+								<p>County, legislative and congressional seats are up for grabs in this year’s Texas general election. Scroll down to see who’s on the ballot. Early voting runs from Oct. 22 to Nov. 2 for the Nov. 6 election. (<a href="http://www.harrisvotes.com/EarlyVoting/EarlyVotingLocationsNonIE.pdf" target="_blank">Here’s everything you need to know to vote early.</a>)</p>
+								<p><em>* Indicates the candidate was endorsed by the <a href="https://www.houstonchronicle.com/opinion/endorsements/" target="_blank">Houston Chronicle Editorial Board</a>, which is independent from the Houston Chronicle newsroom.</em></p>
+							</div>
+						</div>
+					</div>
+					<!--Related coverage-->
+					<div class="row">
+						<div class="relcov col-md-10 offset-md-1 col-sm-10 offset-sm-1">
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<a href="https://projects.houstonchronicle.com/2018/elections/voters-guide/" target="_blank"><img class="img-fluid" src="https://s.hdnux.com/photos/76/02/76/16265108/3/rawImage.jpg" />
+									<p><strong>Voter Guide:</strong> Politicians tell us their top three priorities for Texas</p></a>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<a href="https://www.houstonchronicle.com/newsletters/texas-take/" target="_blank"><img class="img-fluid" src="https://d3n32ilufxuvd1.cloudfront.net/5745cec7a69dc8697e3edf52/1167688/upload-81300a21-bd2c-11e8-92f5-15fcc90ae461.jpg" />
+									<p><strong>Sign up:</strong> All things Texas politics, plus Beto-Cruz Friday updates</p></a>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<a href="https://www.houstonchronicle.com/politics/texas-take/texas-take-podcast/" target="_blank"><img class="img-fluid" src="https://s.hdnux.com/photos/76/01/64/16260395/4/rawImage.png" />
+									<p><strong>Texas Take:</strong> Go beyond the headlines with Texas’ best political podcast.</p></a>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<a href="https://www.houstonchronicle.com/opinion/endorsements/" target="_blank"><img class="img-fluid" src="https://d3n32ilufxuvd1.cloudfront.net/5745cec7a69dc8697e3edf52/1167688/upload-f9e815e0-bd20-11e8-904b-c9248b8f8fd9.jpg" />
+									<p><strong>Endorsements:</strong> See who our editorial board recommends for office</p></a>
+								</div>
+							</div>
+						</div><!--End related coverage-->
+					</div>
+					<!--Select county-->
+					<a id="search"></a><div class="col-md-10 offset-md-1">
+						<h4>Search by county</h4>
+						<p style="text-align:center"><a href="" ng-click="correx = !correx">Here’s how we created these lists.</a></p>
+						<div class="state ng-hide" ng-show="correx">
+							<p>The Texas Secretary of State supplied us with the names of candidates appearing on ballots in the eight-county Houston area. If you see any mistakes, please report them to <a href="mailto:jordan.rubio@chron.com">jordan.rubio@chron.com</a>.</p>
+						</div>
+						<select ng-model="allCounties" ng-options="county.county for county in counties">
+							<option value></option>
+						</select><!--End select county-->
+					</div>
+				</div>
+				<!--Ballot-->
+				<div class="results">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-10 offset-md-1">
+								<!--Statewide ballot-->
+								<div class="ng-hide" ng-show="allCounties" ng-repeat="county in counties | filter: allCounties">
+									<h1>Ballot for {{county.county}} County</h1>
+									<ul class="categories">
+										<li ng-click="gotoState()">Statewide |</li>
+										<li ng-click="gotoUSHouse()">U.S. House |</li>
+										<li ng-click="gotoSC()">Texas Supreme Court |</li>
+										<li ng-click="gotoCourt()">Texas Court of Criminal Appeals |</li>
+										<li ng-hide="county.county == 'Montgomery' || county.county == 'Waller'" ng-click="gotoBoard()">State Board of Education |</li>
+										<li ng-hide="county.county == 'Galveston' || county.county == 'Chambers' || county.county == 'Waller'" ng-click="gotoSenate()">Texas Senate |</li>
+										<li ng-click="gotoTXHouse()">Texas House |</li>
+										<li ng-click="gotoLocal()">Local races</li>
+									</ul>
+									<!--Statewide races-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'Statewide'}">
+										<div class="row">
+											<a id="statewide"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>Here are the statewide races. <a href="" ng-click="statewide = !statewide">Click here</a> to see the roles and responsibilities of the offices.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+												<div class="state ng-hide" ng-show="statewide">
+													<div class="col-md-10 offset-md-1">
+														<p><strong>Governor:</strong> The governor of Texas is elected every four years. The governor's responsibilities include signing and vetoing bills passed by the state legislature, serving as commander-in-chief of the state's military, and convening special sessions of the Texas Legislature.</p>
+														<p><strong>U.S. Senate:</strong> The U.S. Senate is one of two chambers that make up the United States Congress. There are two senators elected from each state, who write and vote on laws, approve presidential appointments and ratify treaties. Every two years, one-third of Senate seats are up for election. One of Texas' Senate seats is up for election 2018.</p>
+														<p><strong>Lieutenant Governor:</strong> Texas elects its lieutenant governor every four years. As the second-highest executive office holder in Texas, the lieutenant governor is the presiding officer of the Texas Senate and is responsible for appointing Senate committees and casting votes in the case of a tie. The lieutenant governor becomes governor if the governor dies or leaves office.</p>
+														<p><strong>Attorney General:</strong> Texas elects its attorney general every four years. The attorney general serves as the chief legal counsel for the state, and represents the state in litigation.</p>
+														<p><strong>Comptroller:</strong> The Texas Comptroller elected every four years and is responsible for monitoring economic trends in the state, administrating and collecting taxes, and keeping accounts of state funds.</p>
+														<p><strong>Land Commissioner:</strong> The Texas Land Commissioner, elected every four years, serves as the head of the General Land Office, which manages state lands, operates the Alamo, helps fund Texas public education, provides benefits to veterans, and helps the state recover from natural disasters.</p>
+														<p><strong>Agriculture Commissioner:</strong> Texas elects an agriculture commissioner every four years. The agriculture commissioner heads the Department of Agriculture and oversees programs relating to the production and economic development of agriculture in the state. The agriculture commissioner also administers rural health programs.</p>
+														<p><strong>Railroad Commissioner:</strong> Three railroad commissioners are elected to staggered six-year terms. Commissioners oversee the oil and gas industry in the state.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End Statewide races-->
+									<!--U.S. House-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'U.S. House'}">
+										<div class="row">
+											<a id="ushouse"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>The United States House of Representatives is one of two chambers that makes up the United States Congress. There are 36 representatives from Texas elected to the House every two years. House members are responsible for introducing bills and resolutions, offering amendments and serving on committees. Here are the candidates for {{county.county}} County.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End U.S. House-->
+									<!--Texas Supreme Court-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'Texas Supreme Court'}">
+										<div class="row">
+											<a id="supremecourt"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>The Texas Supreme Court is the highest civil court in Texas. Nine justices are elected to staggered six-year terms.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End Texas Supreme Court-->
+									<!--Texas Court of Criminal Appeals-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'Texas Court of Criminal Appeals'}">
+										<div class="row">
+											<a id="appeals"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>The Texas Court of Criminal Appeals is the highest criminal court in Texas. The court develops rules of evidence for criminal trials, rules for filing appeals, and oversees some funding for court personnel in the state. Eight justices are elected to staggered six-year terms.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End Texas Court of Criminal Appeals-->
+									<!--State Board of Education-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'State Board of Education'}">
+										<div class="row">
+											<a id="board"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>Fifteen members serve on the Texas State Board of Education, each representing a different region of the state. The board manages the state’s K-12 public education. Half of the board’s members are re-elected in even-numbered years. Elections for seven seats on the Texas State Board of Education will take place in 2018. Here are the candidates for {{county.county}} County.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End State Board of Education-->
+									<!--Texas Senate-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'Texas Senate'}">
+										<div class="row">
+											<a id="texassenate"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>The Texas Senate is the upper chamber of the Texas Legislature and is composed of 31 members. Senators serve one two-year term and two four-year terms each decade. Senators write and vote on legislation, serve on committees and work alongside the governor and the Texas House to create laws and establish a state budget. Fifteen Senate seats are up for election in 2018. Here are the candidates for {{county.county}} County.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End Texas Senate-->
+									<!--Texas House-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'Texas House'}">
+										<div class="row">
+											<a id="texashouse"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{level.level}}</h2>
+												<p>The Texas House of Representatives is the lower chamber of the Texas Legislature and is composed of 150 members. Each representative is elected every two years and represents one of the state’s 150 districts. Working alongside the Texas Senate, the responsibilities of House members include passing bills, setting levels for state spending, raising and lowering state taxes, and bringing impeachment charges against statewide officers. Here are the candidates for {{county.county}} County.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End Texas House-->
+									<!--Local races-->
+									<div ng-repeat="level in levels | filter: {county: county.county} | filter: {level: 'Local'}">
+										<div class="row">
+											<a id="local"></a><div class="col-md-12 col-sm-12">
+												<h2 class="levels">{{county.county}} County</h2>
+												<p>This is a list of all the other races that will appear on ballots in {{county.county}} County.</p>
+												<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+											</div>
+										</div>
+										<div class="row">
+											<div ng-repeat="office in offices | filter: county.county | filter: level.level" class="col-md-6">
+								              	<div class="races">
+								              		<h3>{{office.office}}</h3>
+								              		<div ng-repeat="ballot in ballots | filter: {county: county.county} | filter: level.level | filter: office.office:true | orderBy: 'party'">
+							              				<p><span style="color:{{ballot.partyColor}};">{{ballot.party}}</span> <span ng-style="{'color': ballot.winner === 'x' ? ballot.partyColor : ''}">{{ballot.candidate}}</span> <span ng-show="(ballot.endorsed)">*</span><span class="incumbent">{{ballot.incumbent}}</span></p>
+								              		</div>
+								              	</div>
+											</div>
+										</div>
+									</div><!--End Local races-->
+									<hr>
+									<p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a ng-click="return()"> Return to searches</a></p>
+								</div><!--End statewide ballot-->
+							</div>
+						</div>
+					</div>
+				</div><!--End ballot-->
+			</div>
+		</div>
+	</div><!--End app-->
+</body>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/ballot.js"></script>
+<script src="https://projects.sfchronicle.com/shared/js/responsive-child.js"></script>
+</body>
+</html>
